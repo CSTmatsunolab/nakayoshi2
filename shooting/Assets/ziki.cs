@@ -5,7 +5,13 @@ using UnityEngine;
 public class ziki : MonoBehaviour
 {
     public GameObject tama;
+    public GameObject tama2;
+    Vector3 pos;
+    Transform myTransform;
     // Start is called before the first frame update
+    float span = 0.4f;
+    float delta = 0;
+    private bool isShoot = true;
     void Start()
     {
         
@@ -14,25 +20,44 @@ public class ziki : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("down"))
+        if (Input.GetKey("s"))
         {
             transform.Translate(0, -0.05f, 0);
         }
-        if (Input.GetKey("up"))
+        if (Input.GetKey("w"))
         {
             transform.Translate(0, 0.05f, 0);
         }
-        if (Input.GetKey("right"))
+        if (Input.GetKey("d"))
         {
             transform.Translate(0.05f, 0, 0);
         }
-        if (Input.GetKey("left"))
+        if (Input.GetKey("a"))
         {
             transform.Translate(-0.05f, 0, 0);
         }
-        if (Input.GetKeyDown("space"))
-		{
-			Instantiate(tama, transform.position, Quaternion.identity);
-		}
+        transform.localPosition = Utils.ClampPosition(transform.localPosition);
+
+        this.delta += Time.deltaTime;
+        if (this.delta > this.span)
+        {
+            this.delta = 0;
+            myTransform = this.transform;
+            pos = myTransform.position;
+            pos.y -= 0.27f;
+            Instantiate(tama, pos, Quaternion.identity);
+        }
+        if (Input.GetKeyDown("space") && isShoot)
+        {
+            Instantiate(tama2, transform.position, Quaternion.identity);
+            StartCoroutine("ReturnBullet");
+        }
+    }
+
+    IEnumerator ReturnBullet()
+    {  
+        isShoot = false;
+        yield return new WaitForSeconds(5.0f); 
+        isShoot = true;
     }
 }

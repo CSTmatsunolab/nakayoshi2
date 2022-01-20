@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public GameObject tama;
+    float span = 1.0f;
+    float delta = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,8 +32,11 @@ public class Player : MonoBehaviour
         {
             transform.Translate(-0.05f, 0, 0);
         }
-        if (Input.GetKeyDown("space"))
+         
+        this.delta += Time.deltaTime;
+        if (this.delta > this.span)
 		{
+            this.delta = 0;
 			Instantiate(tama, transform.position, Quaternion.identity);
 		}
     }
