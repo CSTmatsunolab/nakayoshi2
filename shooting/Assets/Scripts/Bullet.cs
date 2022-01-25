@@ -13,6 +13,7 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         transform.Translate(0.15f, 0, 0);
 
         if (transform.position.x > 10.0f)
@@ -25,7 +26,7 @@ public class Bullet : MonoBehaviour
     {
         if (col.tag==enemyTag)
     {
-        Destroy(col.gameObject);
+        Destroy(col.gameObject);//これで消えてる
         Destroy(this.gameObject);
     }
     }
