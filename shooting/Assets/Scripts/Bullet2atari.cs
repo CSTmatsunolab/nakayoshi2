@@ -15,21 +15,6 @@ public class Bullet2atari : MonoBehaviour
         this.transform.Translate(x, 0, 0);
         Destroy(Range,3);
     }
-   /* private string enemyTag = "Enemy";
-    void OnCollisionEnter2D(Collision2D col)
-    {
-    if (col.collider.tag == enemyTag)
-    {
-        Destroy(col.gameObject);
-        Destroy(this.gameObject);
-    }
-    }*/
-    void OnTriggerEnter2D(Collider2D col)
-    {
-    if (col.tag==enemyTag)
-    {
-        Destroy(col.gameObject);
-        Destroy(this.gameObject);
-    }
-    }
+ 
+    
 }

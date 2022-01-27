@@ -20,5 +20,15 @@ public class EnemyController : MonoBehaviour
             Destroy(gameObject);
         }
         //当たり判定はここで管理した方がいいんじゃ
+
+    }
+    private string BulletTag = "Bullet";
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag==BulletTag)
+    {
+        Destroy(col.gameObject);//これで消えてる
+        Destroy(this.gameObject);
+    }
     }
 }

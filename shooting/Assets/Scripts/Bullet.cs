@@ -21,13 +21,5 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private string enemyTag = "Enemy";
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.tag==enemyTag)
-    {
-        Destroy(col.gameObject);//これで消えてる
-        Destroy(this.gameObject);
-    }
-    }
+    
 }
