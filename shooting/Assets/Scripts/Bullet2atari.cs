@@ -12,8 +12,8 @@ public class Bullet2atari : MonoBehaviour
     void Update()
     {
         //this speed = 0.2f;
-        this.transform.Translate(-0.1f, 0, 0);
-        Destroy(Range,4);
+        this.transform.Translate(x, 0, 0);
+        Destroy(Range,3);
     }
    /* private string enemyTag = "Enemy";
     void OnCollisionEnter2D(Collision2D col)

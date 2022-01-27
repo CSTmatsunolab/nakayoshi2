@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Range: {fileID: 8404614109908736246}
-  x: 0.004
+  x: 0.01
 --- !u!1 &5528734165017804305
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Range: {fileID: 8404614109908736246}
-  x: 0.004
+  x: 0.01
 --- !u!1 &5658030674643771097
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Range: {fileID: 8404614109908736246}
-  x: 0.004
+  x: 0.01
 --- !u!1 &5685755422430282083
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,7 +543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Range: {fileID: 8404614109908736246}
-  x: 0.004
+  x: 0.01
 --- !u!1 &7708359949578563826
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,7 +679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Range: {fileID: 8404614109908736246}
-  x: 0.004
+  x: 0.01
 --- !u!1 &8093245512217717123
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,7 +815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Range: {fileID: 8404614109908736246}
-  x: 0.004
+  x: 0.01
 --- !u!1 &8404614109908736246
 GameObject:
   m_ObjectHideFlags: 0
