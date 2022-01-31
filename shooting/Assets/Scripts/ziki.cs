@@ -44,6 +44,7 @@ public class ziki : MonoBehaviour
             this.delta = 0;
             myTransform = this.transform;
             pos = myTransform.position;
+            pos.x += 1.0f;
             pos.y -= 0.27f;
             Instantiate(tama, pos, Quaternion.identity);
         }
