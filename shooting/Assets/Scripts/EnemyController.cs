@@ -5,8 +5,13 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     GameObject scoreObject;
-
+    public GameObject Enemytama;
+    Vector3 pos;
+    Transform myTransform;
     // Start is called before the first frame update
+    float span = 0.8f;
+    float delta = 0;
+   
     void Start()
     {
         scoreObject = GameObject.Find("GameObject");        
@@ -22,7 +27,16 @@ public class EnemyController : MonoBehaviour
             Destroy(gameObject);
         }
         //当たり判定はここで管理した方がいいんじゃ
-
+        this.delta += Time.deltaTime;
+        if (this.delta > this.span)
+        {
+             this.delta = 0;
+             myTransform = this.transform;
+             pos = myTransform.position;
+             pos.x += 1.5f;
+             pos.y -= 0.27f;
+             Instantiate(Enemytama, pos, Quaternion.identity);
+        }
     }
     private string BulletTag = "Bullet";
     void OnTriggerEnter2D(Collider2D col)

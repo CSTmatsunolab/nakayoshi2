@@ -24,7 +24,7 @@ public class EnemyGenerator : MonoBehaviour
 
             GameObject go = Instantiate(Enemy) as GameObject;
             int py = Random.Range(-4, 4);
-            go.transform.position = new Vector3(9, py, 0);
+            go.transform.position = new Vector3(12, py, 0);
         }
     }
 }

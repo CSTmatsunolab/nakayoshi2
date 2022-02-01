@@ -15,6 +15,4 @@ public class Bullet2atari : MonoBehaviour
         this.transform.Translate(x, 0, 0);
         Destroy(Range,3);
     }
- 
-    
 }
