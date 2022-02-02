@@ -41,6 +41,11 @@ public class PlayerHPBar : MonoBehaviour
             //(float)をつけてfloatの変数として振舞わせる。
             slider.value = (float)currentHp / (float)maxHp; ;
             Debug.Log("slider.value : " + slider.value);
+
+            Destroy(col.gameObject);//これで消えてる
         }
     }
+
+
+
 }

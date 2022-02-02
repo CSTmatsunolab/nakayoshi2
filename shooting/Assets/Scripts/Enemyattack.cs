@@ -14,9 +14,9 @@ public class Enemyattack : MonoBehaviour
     void Update()
     {
 
-        transform.Translate(-0.15f, 0, 0);
+        transform.Translate(-0.10f, 0, 0);
 
-        if (transform.position.x > 10.0f)
+        if (transform.position.x < -10.0f)
         {
             Destroy(gameObject);
         }
