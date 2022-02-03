@@ -5,7 +5,6 @@ using UnityEngine;
 public class Bullet2atari : MonoBehaviour
 {
     public GameObject Range;
-    private string enemyTag = "Enemy";
     public float x;
     //float speed = 0;
 
