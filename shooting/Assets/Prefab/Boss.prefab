@@ -101,6 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e20cf9c01359429180c9d3803cdc285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bosstama: {fileID: 4842548033317566058, guid: fff3aafdaa8ab4761ba597e215846f7d, type: 3}
+  bosstama2: {fileID: 2717082653583558027, guid: fb34598057fac4464bcce5ba591a26bd, type: 3}
 --- !u!58 &925832508229908237
 CircleCollider2D:
   m_ObjectHideFlags: 0

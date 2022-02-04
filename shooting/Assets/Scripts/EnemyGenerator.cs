@@ -7,8 +7,8 @@ public class EnemyGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-           // GameObject go = Instantiate(Boss) as GameObject;
-           // go.transform.position = new Vector3(8, 0, 0);
+           GameObject go = Instantiate(Boss) as GameObject;
+           go.transform.position = new Vector3(8, 0, 0);
             //テスト用
     }
 

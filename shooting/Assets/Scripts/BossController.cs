@@ -4,20 +4,38 @@ using UnityEngine;
 
 public class BossController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject bosstama;
+    public GameObject bosstama2;
+    Vector3 pos;
+    Transform myTransform;
 
     // Update is called once per frame
     void Update()
     {
-        //transform.Translate(-0.03f, 0, 0);
+        if (Input.GetKeyDown("r"))
+        {        
+            //Instantiate(bosstama2, pos, Quaternion.identity);
+            StartCoroutine("Bullet2");
+        }
+        if (Input.GetKeyDown("t"))
+        {   
+            myTransform = this.transform;
+            pos = myTransform.position;
+            pos.x -= 1.0f;   
+            pos.y -= 0.27f;
+            Instantiate(bosstama, pos, Quaternion.identity);
+        }
 
-        if (transform.position.x < -10.0f)
-        {
-            Destroy(gameObject);
+    }
+    IEnumerator Bullet2()
+    {
+        for(int i=0; i<=5; i++){
+            myTransform = this.transform;
+            pos = myTransform.position;
+            pos.x -= 1.0f;
+            pos.y -= 0.27f;
+            Instantiate(bosstama2, pos, Quaternion.identity);
+            yield return new WaitForSeconds(0.2f); 
         }
     }
 }

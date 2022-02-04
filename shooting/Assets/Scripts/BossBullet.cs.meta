@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 2eba231ad4bf8419c8fd5e1baeb94205
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ziki: {instanceID: 0}
+  - bosstama: {fileID: 4842548033317566058, guid: fff3aafdaa8ab4761ba597e215846f7d, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
