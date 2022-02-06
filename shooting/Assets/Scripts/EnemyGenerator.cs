@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EnemyGenerator : MonoBehaviour
 {
     // Start is called before the first frame update
+    //public CountText countText;
+    
     void Start()
     {
-           GameObject go = Instantiate(Boss) as GameObject;
-           go.transform.position = new Vector3(8, 0, 0);
-            //テスト用
+        scoreObject = GameObject.Find("GameObject"); 
+        //    GameObject go = Instantiate(Boss) as GameObject;
+        //    go.transform.position = new Vector3(8, 0, 0);
+        //     //テスト用
     }
-
+    public GameObject scoreObject;
     public GameObject Enemy;
     public GameObject Boss;
     float span = 1.0f;
@@ -30,14 +34,17 @@ public class EnemyGenerator : MonoBehaviour
              go.transform.position = new Vector3(12, py, 0);
          }
 
-        
-         /*if (this.delta == this.span)//Boss出現
+        int Boss_span = 0;
+        Debug.Log(Boss_span);
+        Boss_span = scoreObject.GetComponent<CountText>().Score;
+        Debug.Log(Boss_span);
+         if (Boss_span == 20)//Boss出現
          {
-            this.delta = 0;//時間関係
+            Boss_span = 0;//時間関係
 
            GameObject go = Instantiate(Boss) as GameObject;
              go.transform.position = new Vector3(8, 0, 0);
-        // }*/
+         }
 
 
     }
