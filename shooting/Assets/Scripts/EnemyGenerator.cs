@@ -38,7 +38,7 @@ public class EnemyGenerator : MonoBehaviour
         Debug.Log(Boss_span);
         Boss_span = scoreObject.GetComponent<CountText>().Score;
         Debug.Log(Boss_span);
-         if (Boss_span == 20)//Boss出現
+         if (Boss_span == 3)//Boss出現
          {
             Boss_span = 0;//時間関係
 
