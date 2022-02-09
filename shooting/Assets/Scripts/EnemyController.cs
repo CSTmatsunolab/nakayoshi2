@@ -11,11 +11,18 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     float span = 0.8f;
     float delta = 0;
-   
+    
+
     void Start()
     {
         scoreObject = GameObject.Find("GameObject");        
     }
+
+
+    // public bool Flag{
+    // get{ return this.flag; }  //取得用
+    // private set{ this.flag = value; }　//値入力用
+    // }
 
     // Update is called once per frame
     void Update()

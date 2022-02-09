@@ -20,6 +20,7 @@ public class EnemyGenerator : MonoBehaviour
     public GameObject Boss;
     float span = 1.0f;
     float delta = 0;
+    bool flag = false;//ボス有無,boss破壊時に引っ張ってくる必要あり?  
 
     // Update is called once per frame
     void Update()
@@ -38,12 +39,18 @@ public class EnemyGenerator : MonoBehaviour
         Debug.Log(Boss_span);
         Boss_span = scoreObject.GetComponent<CountText>().Score;
         Debug.Log(Boss_span);
-         if (Boss_span == 3)//Boss出現
+
+        // Debug.Log(flag_g);
+        // Debug.Log(enemyController.flag);
+        // flag_g = enemyController.flag;//BossObject.GetComponent<BossController>().flag;//Con→Genにflag引っ張り跡地
+
+         if ((Boss_span == 3) && (flag == false) )//Boss出現
          {
             Boss_span = 0;//時間関係
 
            GameObject go = Instantiate(Boss) as GameObject;
              go.transform.position = new Vector3(8, 0, 0);
+              flag = true;
          }
 
 

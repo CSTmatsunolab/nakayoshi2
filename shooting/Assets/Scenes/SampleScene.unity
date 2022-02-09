@@ -847,8 +847,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb6e4972c8f17418d81ecf7ec50a90de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreObject: {fileID: 0}
   Enemy: {fileID: 8915735874241953298, guid: 2a516a99b06d448e5b99e0babcca0f7f, type: 3}
-  Boss: {fileID: 906079993562249270, guid: c2db81cefa0ca441d8cfec2cbfba6056, type: 3}
+  Boss: {fileID: 4587529769039520635, guid: c2db81cefa0ca441d8cfec2cbfba6056, type: 3}
 --- !u!4 &1256868079
 Transform:
   m_ObjectHideFlags: 0
