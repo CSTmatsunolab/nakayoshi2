@@ -44,7 +44,7 @@ public class EnemyGenerator : MonoBehaviour
         // Debug.Log(enemyController.flag);
         // flag_g = enemyController.flag;//BossObject.GetComponent<BossController>().flag;//Con→Genにflag引っ張り跡地
 
-         if ((Boss_span == 3) && (flag == false) )//Boss出現
+         if ((Boss_span >= 3) && (flag == false) )//Boss出現
          {
             Boss_span = 0;//時間関係
 

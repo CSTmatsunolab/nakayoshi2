@@ -6,6 +6,7 @@ public class BossBullet2 : MonoBehaviour
 {
     // Start is called before the first frame update
     public float x;
+    public GameObject Range;
     //float speed = 0;
 
     void Update()
@@ -16,6 +17,6 @@ public class BossBullet2 : MonoBehaviour
         { 
             Destroy(this.gameObject);
         }
-
+        Destroy(Range,4);
     }
 }
