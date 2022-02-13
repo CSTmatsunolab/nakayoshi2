@@ -42,6 +42,12 @@ public class BossHPBar : MonoBehaviour
             slider.value = (float)currentHp / (float)maxHp; ;
             Debug.Log("slider.value : " + slider.value);
 
+        if(currentHp <= 0){
+            Destroy(this.gameObject);
+            Destroy(slider.gameObject);
+
+        }
+
             Destroy(col.gameObject);//これで消えてる
         }
     }
