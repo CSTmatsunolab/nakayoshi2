@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //UI使うときは忘れずに。
 using UnityEngine.UI;
@@ -43,6 +44,10 @@ public class PlayerHPBar : MonoBehaviour
             Debug.Log("slider.value : " + slider.value);
 
             Destroy(col.gameObject);//これで消えてる
+        }
+        if(slider.value<=0)
+        {
+            SceneManager.LoadScene("GameOverScene");
         }
     }
 
