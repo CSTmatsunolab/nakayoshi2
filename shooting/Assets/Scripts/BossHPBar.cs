@@ -12,9 +12,20 @@ public class BossHPBar : MonoBehaviour
     int currentHp;
     //Sliderを入れる
     public Slider slider;
+    public GameObject Boss;
+
+    // public static BossHPBar instance;
+    // public void Awake(){
+    //     if(instance == null){
+    //         instance = this;
+    //     }
+    // }
 
     void Start()
     {
+        GameObject boss = GameObject.Find ("Boss");
+        Debug.Log ("target1 = " + boss);
+
         //Sliderを満タンにする。
         slider.value = 1;
         //現在のHPを最大HPと同じに。
@@ -29,7 +40,7 @@ public class BossHPBar : MonoBehaviour
         if (col.tag == "Bullet")
         {
             //ダメージは1～100の中でランダムに決める。
-            int damage = 1;
+            int damage = 10;
             Debug.Log("damage : " + damage);
 
             //現在のHPからダメージを引く
@@ -44,8 +55,11 @@ public class BossHPBar : MonoBehaviour
 
         if(currentHp <= 0){
             Destroy(this.gameObject);
+            Destroy(Boss);
             Destroy(slider.gameObject);
 
+            GameObject boss = GameObject.Find ("Boss");
+            Debug.Log ("target1 = " + boss);
         }
 
             Destroy(col.gameObject);//これで消えてる

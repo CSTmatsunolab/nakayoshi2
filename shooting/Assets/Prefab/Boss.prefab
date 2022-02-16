@@ -365,6 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 5739537121204003558}
+  Boss: {fileID: 4587529769039520635}
 --- !u!1 &4587529769039520635
 GameObject:
   m_ObjectHideFlags: 0

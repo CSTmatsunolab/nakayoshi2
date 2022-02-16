@@ -36,15 +36,15 @@ public class EnemyGenerator : MonoBehaviour
          }
 
         int Boss_span = 0;
-        Debug.Log(Boss_span);
+        //Debug.Log(Boss_span);
         Boss_span = scoreObject.GetComponent<CountText>().Score;
-        Debug.Log(Boss_span);
+        //Debug.Log(Boss_span);
 
         // Debug.Log(flag_g);
         // Debug.Log(enemyController.flag);
         // flag_g = enemyController.flag;//BossObject.GetComponent<BossController>().flag;//Con→Genにflag引っ張り跡地
 
-         if ((Boss_span >= 3) && (flag == false) )//Boss出現
+         if ((Boss_span >= 3) && (flag == false) )//Boss出現 条件どうする
          {
             Boss_span = 0;//時間関係
 
@@ -53,6 +53,14 @@ public class EnemyGenerator : MonoBehaviour
               flag = true;
          }
 
+        GameObject boss = GameObject.Find ("Boss(Clone)");
+         if(GameObject.Find ("Boss(Clone)") ){
+            Debug.Log("true");
+            flag = true;
+         }else{
+            Debug.Log("false");
+            flag = false;
+         }
 
     }
 }
