@@ -26,7 +26,7 @@ public class EnemyGenerator : MonoBehaviour
     void Update()
     {
         this.delta += Time.deltaTime;
-        if (this.delta > this.span)
+        if ((this.delta > this.span)&&(flag == false))　//関数化
         {
              this.delta = 0;//時間関係
 
@@ -44,7 +44,8 @@ public class EnemyGenerator : MonoBehaviour
         // Debug.Log(enemyController.flag);
         // flag_g = enemyController.flag;//BossObject.GetComponent<BossController>().flag;//Con→Genにflag引っ張り跡地
 
-         if ((Boss_span >= 3) && (flag == false) )//Boss出現 条件どうする
+         if ((Boss_span % 3 == 1) && (flag == false) )//Boss出現 条件どうする
+         // 別変数用意　
          {
             Boss_span = 0;//時間関係
 
