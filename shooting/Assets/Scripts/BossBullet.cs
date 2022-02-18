@@ -19,7 +19,8 @@ public class BossBullet : MonoBehaviour
     void Update()
     {
          //プレイヤーと対照との差分を取得
-        transform.Translate(diff.x * x,diff.y * x,0);
+        transform.Translate(diff.x * x * 2,diff.y * x * 2,0);
+        //ビルド後の速さ
         //transform.position= Vector3.MoveTowards(this.transform.position,ziki.transform.position,x);//取得した座標に対して変数をかけてやると進む
         if (transform.position.x < -10.0f)
         { 

@@ -12,7 +12,7 @@ public class BossBullet2 : MonoBehaviour
     void Update()
     {
         //this speed = 0.2f;
-        this.transform.Translate(-x, 0, 0);
+        this.transform.Translate(-x * 2, 0, 0);
         if (transform.position.x < -10.0f)
         { 
             Destroy(this.gameObject);

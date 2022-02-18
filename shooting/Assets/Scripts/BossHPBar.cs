@@ -40,7 +40,7 @@ public class BossHPBar : MonoBehaviour
         if (col.tag == "Bullet")
         {
             //ダメージは1～100の中でランダムに決める。
-            int damage = 10;
+            int damage = 1;
             Debug.Log("damage : " + damage);
 
             //現在のHPからダメージを引く

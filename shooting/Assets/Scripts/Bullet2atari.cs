@@ -11,7 +11,7 @@ public class Bullet2atari : MonoBehaviour
     void Update()
     {
         //this speed = 0.2f;
-        this.transform.Translate(x, 0, 0);
+        this.transform.Translate(x * 2, 0, 0);
         Destroy(Range,3);
     }
 }

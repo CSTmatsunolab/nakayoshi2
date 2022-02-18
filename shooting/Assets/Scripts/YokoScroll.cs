@@ -5,7 +5,7 @@ using UnityEngine;
 public class YokoScroll : MonoBehaviour
 {
     //スクロールスピード
-    [SerializeField] float speed = 1;
+    [SerializeField] float speed = 2;
    
    void Update()
    {

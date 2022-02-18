@@ -22,19 +22,19 @@ public class ziki : MonoBehaviour
     {
         if (Input.GetKey("s"))
         {
-            transform.Translate(0, -0.05f, 0);
+            transform.Translate(0, -0.1f, 0);
         }
         if (Input.GetKey("w"))
         {
-            transform.Translate(0, 0.05f, 0);
+            transform.Translate(0, 0.1f, 0);
         }
         if (Input.GetKey("d"))
         {
-            transform.Translate(0.05f, 0, 0);
+            transform.Translate(0.1f, 0, 0);
         }
         if (Input.GetKey("a"))
         {
-            transform.Translate(-0.05f, 0, 0);
+            transform.Translate(-0.1f, 0, 0);
         }
         transform.localPosition = Utils.ClampPosition(transform.localPosition);
 

@@ -14,7 +14,8 @@ public class Bullet : MonoBehaviour
     void Update()
     {
 
-        transform.Translate(0.15f, 0, 0);
+        transform.Translate(0.30f, 0, 0);
+        //ビルド後の速さ
 
         if (transform.position.x > 10.0f)
         {
