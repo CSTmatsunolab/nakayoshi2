@@ -50,9 +50,9 @@ public class EnemyController : MonoBehaviour
     {
         if (col.tag==BulletTag)
     {
-        scoreObject.GetComponent<CountText>().AddScore();
         Destroy(col.gameObject);//これで消えてる
         Destroy(this.gameObject);
+        scoreObject.GetComponent<CountText>().AddScore();
     }
     }
 }

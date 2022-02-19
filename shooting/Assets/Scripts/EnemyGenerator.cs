@@ -32,7 +32,7 @@ public class EnemyGenerator : MonoBehaviour
 
              GameObject go = Instantiate(Enemy) as GameObject;
              int py = Random.Range(-4, 4);
-             go.transform.position = new Vector3(12, py, 0);
+             go.transform.position = new Vector3(30, py, 0);
          }
 
         int Boss_span = 0;
@@ -44,7 +44,7 @@ public class EnemyGenerator : MonoBehaviour
         // Debug.Log(enemyController.flag);
         // flag_g = enemyController.flag;//BossObject.GetComponent<BossController>().flag;//Con→Genにflag引っ張り跡地
 
-         if ((Boss_span % 3 == 1) && (flag == false) )//Boss出現 条件どうする
+         if ((Boss_span % 10 == 0 && Boss_span != 0) && (flag == false) )//Boss出現 条件どうする
          // 別変数用意　
          {
             Boss_span = 0;//時間関係

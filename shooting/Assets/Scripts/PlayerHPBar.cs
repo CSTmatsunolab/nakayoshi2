@@ -45,10 +45,10 @@ public class PlayerHPBar : MonoBehaviour
 
             Destroy(col.gameObject);//これで消えてる
         }
-        // if(slider.value<=0)
-        // {
-        //     SceneManager.LoadScene("GameOverScene");
-        // }
+        if(slider.value<=0)
+        {
+            SceneManager.LoadScene("GameOverScene");
+        }
     }
 
 

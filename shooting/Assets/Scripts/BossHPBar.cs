@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class BossHPBar : MonoBehaviour
 {
+    GameObject scoreObject;
     //最大HPと現在のHP。
     int maxHp = 100;
     int currentHp;
@@ -23,6 +24,7 @@ public class BossHPBar : MonoBehaviour
 
     void Start()
     {
+        scoreObject = GameObject.Find("GameObject");
         GameObject boss = GameObject.Find ("Boss");
         Debug.Log ("target1 = " + boss);
 
@@ -57,6 +59,7 @@ public class BossHPBar : MonoBehaviour
             Destroy(this.gameObject);
             Destroy(Boss);
             Destroy(slider.gameObject);
+            scoreObject.GetComponent<CountText>().AddScore();
 
             GameObject boss = GameObject.Find ("Boss");
             Debug.Log ("target1 = " + boss);
